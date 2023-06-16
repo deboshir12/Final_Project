@@ -25,7 +25,7 @@ def requesting_info(date, station, event, period):
                     if 0 <= datetime.datetime.fromisoformat(flight[event][:19]).hour - default_date.hour  <= period:
                         info.append(flight['thread']['number'])
                         info.append(flight['thread']['title'])
-                        info.append(flight['departure'][11:16])
+                        info.append(flight[event][11:16])
                         flights.append(info)
     return name, flights
 
