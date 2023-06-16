@@ -60,16 +60,16 @@ class telebot_itmo:
             bot.send_message(message.chat.id, text = 'Выберете время вылета:',reply_markup=markup)
             
         elif(message.text == '💬 приземление в ближайшие 2 часа'):
-            rqst.flight_table(event2,rqst.default_date,2)
+            rqst.flight_table(event2,2)
             bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
         elif(message.text == '📝 приземление на весь день'):
-            rqst.flight_table(event2,rqst.default_date,24)
+            rqst.flight_table(event2,24)
             bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
         elif(message.text == '💬 вылет в ближайшие 2 часа'):
-            rqst.flight_table(event1,rqst.default_date,2)
+            rqst.flight_table(event1,2)
             bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
         elif(message.text == '📝 вылет на весь день'):
-            rqst.flight_table(event1,rqst.default_date,24)
+            rqst.flight_table(event1,24)
             bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
             
         #-----железнодорожные рейсы-----#    
