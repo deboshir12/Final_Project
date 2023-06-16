@@ -91,31 +91,35 @@ class telebot_itmo:
             btn20 = types.KeyboardButton("🚂 прибытие на Московский")
             back = types.KeyboardButton("🛑 Вернуться в главное меню") 
             markup1.add(btn10, btn20, back)
-            bot.send_message(message.chat.id, text= 'Выберете time')
+            bot.send_message(message.chat.id, text= 'Выберете время(Московский)',reply_markup=markup)
         elif message.text == "Витебский":
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             btn1 = types.KeyboardButton("🚉 отправление с Витебского")
             btn2 = types.KeyboardButton("🚂 прибытие на Витебский")
             back = types.KeyboardButton("🛑 Вернуться в главное меню") 
             markup.add(btn1, btn2, back)
+            bot.send_message(message.chat.id, text= 'Выберете время(Витебский)',reply_markup=markup)
         elif message.text == "Ладожский":
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             btn1 = types.KeyboardButton("🚉 отправление с Ладожского")
             btn2 = types.KeyboardButton("🚂 прибытие на Ладожский")
             back = types.KeyboardButton("🛑 Вернуться в главное меню") 
             markup.add(btn1, btn2, back)
+            bot.send_message(message.chat.id, text= 'Выберете время(Ладожский)',reply_markup=markup)
         elif message.text == "Балтийский":
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             btn1 = types.KeyboardButton("🚉 отправление с Балтийского")
             btn2 = types.KeyboardButton("🚂 прибытие с Балтийского")
             back = types.KeyboardButton("🛑 Вернуться в главное меню") 
             markup.add(btn1, btn2, back)
+            bot.send_message(message.chat.id, text= 'Выберете время(Балтийский)',reply_markup=markup)
         elif message.text == "Финляндский":
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             btn1 = types.KeyboardButton("🚉 отправление с Финляндского")
             btn2 = types.KeyboardButton("🚂 прибытие с Финляндского")
             back = types.KeyboardButton("🛑 Вернуться в главное меню") 
             markup.add(btn1, btn2, back)
+            bot.send_message(message.chat.id, text= 'Выберете время(Финляндский)',reply_markup=markup)
         
         elif(message.text == '🚂 прибытие на Московский'):
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -123,7 +127,7 @@ class telebot_itmo:
             btn2 = types.KeyboardButton("📝 прибытие на весь день на Московский")
             back = types.KeyboardButton("🛑 Вернуться в главное меню") 
             markup.add(btn1, btn2, back)
-            bot.send_message(message.chat.id, text = 'Выберете время приземление:',reply_markup=markup)
+            bot.send_message(message.chat.id, text = 'Выберете время прибытие:',reply_markup=markup)
         
         elif(message.text == '🚉 отправление с Московского'):
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -131,71 +135,71 @@ class telebot_itmo:
             btn2 = types.KeyboardButton("📝 отправление день с Московского")
             back = types.KeyboardButton("🛑 Вернуться в главное меню") 
             markup.add(btn1, btn2, back)
-            bot.send_message(message.chat.id, text = 'Выберете время вылета:',reply_markup=markup)
+            bot.send_message(message.chat.id, text = 'Выберете время отправления:',reply_markup=markup)
         
         elif(message.text == '🚂 прибытие на Витебский'):
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            btn1 = types.KeyboardButton("💬 прибытие в ближайшие 2 часа")
-            btn2 = types.KeyboardButton("📝 прибытие на весь день")
+            btn1 = types.KeyboardButton("💬 прибытие в ближайшие 2 часа(Витебский)")
+            btn2 = types.KeyboardButton("📝 прибытие на весь день(Витебский)")
             back = types.KeyboardButton("🛑 Вернуться в главное меню") 
             markup.add(btn1, btn2, back)
-            bot.send_message(message.chat.id, text = 'Выберете время приземление:',reply_markup=markup)
+            bot.send_message(message.chat.id, text = 'Выберете время прибытие:',reply_markup=markup)
         
         elif(message.text == '🚉 отправление с Витебского'):
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            btn1 = types.KeyboardButton("💬 отправление в ближайшие 2 часа")
-            btn2 = types.KeyboardButton("📝 отправление на весь день")
+            btn1 = types.KeyboardButton("💬 отправление в ближайшие 2 часа(Витебский)")
+            btn2 = types.KeyboardButton("📝 отправление на весь день(Витебский)")
             back = types.KeyboardButton("🛑 Вернуться в главное меню") 
             markup.add(btn1, btn2, back)
-            bot.send_message(message.chat.id, text = 'Выберете время вылета:',reply_markup=markup)
+            bot.send_message(message.chat.id, text = 'Выберете время отправления:',reply_markup=markup)
             
         elif(message.text == '🚂 прибытие на Ладожский'):
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            btn1 = types.KeyboardButton("💬 прибытие в ближайшие 2 часа")
-            btn2 = types.KeyboardButton("📝 прибытие на весь день")
+            btn1 = types.KeyboardButton("💬 прибытие в ближайшие 2 часа(Ладожский)")
+            btn2 = types.KeyboardButton("📝 прибытие на весь день(Ладожский)")
             back = types.KeyboardButton("🛑 Вернуться в главное меню") 
             markup.add(btn1, btn2, back)
-            bot.send_message(message.chat.id, text = 'Выберете время приземление:',reply_markup=markup)
+            bot.send_message(message.chat.id, text = 'Выберете время прибытие:',reply_markup=markup)
         
         elif(message.text == '🚉 отправление с Ладожского'):
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            btn1 = types.KeyboardButton("💬 отправление в ближайшие 2 часа")
-            btn2 = types.KeyboardButton("📝 отправление на весь день")
+            btn1 = types.KeyboardButton("💬 отправление в ближайшие 2 часа(Ладожский)")
+            btn2 = types.KeyboardButton("📝 отправление на весь день(Ладожский)")
             back = types.KeyboardButton("🛑 Вернуться в главное меню") 
             markup.add(btn1, btn2, back)
-            bot.send_message(message.chat.id, text = 'Выберете время вылета:',reply_markup=markup)
+            bot.send_message(message.chat.id, text = 'Выберете время отправления:',reply_markup=markup)
         
         elif(message.text == '🚂 прибытие с Балтийского'):
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            btn1 = types.KeyboardButton("💬 прибытие в ближайшие 2 часа")
-            btn2 = types.KeyboardButton("📝 прибытие на весь день")
+            btn1 = types.KeyboardButton("💬 прибытие в ближайшие 2 часа(Балтийский)")
+            btn2 = types.KeyboardButton("📝 прибытие на весь день(Балтийский)")
             back = types.KeyboardButton("🛑 Вернуться в главное меню") 
             markup.add(btn1, btn2, back)
-            bot.send_message(message.chat.id, text = 'Выберете время приземление:',reply_markup=markup)
+            bot.send_message(message.chat.id, text = 'Выберете время прибытие:',reply_markup=markup)
         
         elif(message.text == '🚉 отправление с Балтийского'):
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            btn1 = types.KeyboardButton("💬 отправление в ближайшие 2 часа")
-            btn2 = types.KeyboardButton("📝 отправление на весь день")
+            btn1 = types.KeyboardButton("💬 отправление в ближайшие 2 часа(Балтийский)")
+            btn2 = types.KeyboardButton("📝 отправление на весь день(Балтийский)")
             back = types.KeyboardButton("🛑 Вернуться в главное меню") 
             markup.add(btn1, btn2, back)
-            bot.send_message(message.chat.id, text = 'Выберете время вылета:',reply_markup=markup)
+            bot.send_message(message.chat.id, text = 'Выберете время отправления:',reply_markup=markup)
             
         elif(message.text == '🚂 прибытие с Финляндского'):
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            btn1 = types.KeyboardButton("💬 прибытие в ближайшие 2 часа")
-            btn2 = types.KeyboardButton("📝 прибытие на весь день")
+            btn1 = types.KeyboardButton("💬 прибытие в ближайшие 2 часа(Финляндский)")
+            btn2 = types.KeyboardButton("📝 прибытие на весь день(Финляндский)")
             back = types.KeyboardButton("🛑 Вернуться в главное меню") 
             markup.add(btn1, btn2, back)
-            bot.send_message(message.chat.id, text = 'Выберете время приземление:',reply_markup=markup)
+            bot.send_message(message.chat.id, text = 'Выберете время прибытия:',reply_markup=markup)
         
         elif(message.text == '🚉 отправление с Финляндского'):
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-            btn1 = types.KeyboardButton("💬 отправление в ближайшие 2 часа")
-            btn2 = types.KeyboardButton("📝 отправление на весь день")
+            btn1 = types.KeyboardButton("💬 отправление в ближайшие 2 часа(Финляндский)")
+            btn2 = types.KeyboardButton("📝 отправление на весь день(Финляндский)")
             back = types.KeyboardButton("🛑 Вернуться в главное меню") 
             markup.add(btn1, btn2, back)
-            bot.send_message(message.chat.id, text = 'Выберете время вылета:',reply_markup=markup)
+            bot.send_message(message.chat.id, text = 'Выберете время отправления:',reply_markup=markup)
             
             
         elif(message.text == '💬 прибытие в ближайшие 2 часа на Московский'):
@@ -210,6 +214,58 @@ class telebot_itmo:
         elif(message.text == '📝 отправление день с Московского'):
             rqst.train_table('Moscow',event1,24)
             bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
+            
+        elif(message.text == '💬 прибытие в ближайшие 2 часа(Витебский)'):
+            rqst.train_table('Vitebski',event2,2)
+            bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
+        elif(message.text == '📝 прибытие на весь день(Витебский)'):
+            rqst.train_table('Vitebski',event2,24)
+            bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
+        elif(message.text == '💬 отправление в ближайшие 2 часа(Витебский)'):
+            rqst.train_table('Vitebski',event1,2)
+            bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
+        elif(message.text == '📝 отправление на весь день(Витебский)'):
+            rqst.train_table('Vitebski',event1,24)
+            bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
+            
+        elif(message.text == '💬 прибытие в ближайшие 2 часа(Балтийский)'):
+            rqst.train_table('Baltic',event2,2)
+            bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
+        elif(message.text == '📝 прибытие на весь день(Балтийский)'):
+            rqst.train_table('Baltic',event2,24)
+            bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
+        elif(message.text == '💬 отправление в ближайшие 2 часа(Балтийский)'):
+            rqst.train_table('Baltic',event1,2)
+            bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
+        elif(message.text == '📝 отправление на весь день(Балтийский)'):
+            rqst.train_table('Baltic',event1,24)
+            bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
+            
+        elif(message.text == '💬 прибытие в ближайшие 2 часа(Финляндский)'):
+            rqst.train_table('Finnish',event2,2)
+            bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
+        elif(message.text == '📝 прибытие на весь день(Финляндский)'):
+            rqst.train_table('Finnish',event2,24)
+            bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
+        elif(message.text == '💬 отправление в ближайшие 2 часа(Финляндский)'):
+            rqst.train_table('Finnish',event1,2)
+            bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
+        elif(message.text == '📝 отправление на весь день(Финляндский)'):
+            rqst.train_table('Finnish',event1,24)
+            bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
+        
+        elif(message.text == '💬 прибытие в ближайшие 2 часа(Ладожский)'):
+            rqst.train_table('Ladozhski',event2,2)
+            bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
+        elif(message.text == '📝 прибытие на весь день(Ладожский)'):
+            rqst.train_table('Ladozhski',event2,24)
+            bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
+        elif(message.text == '💬 отправление в ближайшие 2 часа(Ладожский)'):
+            rqst.train_table('Ladozhski',event1,2)
+            bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
+        elif(message.text == '📝 отправление на весь день(Ладожский)'):
+            rqst.train_table('Ladozhski',event1,24)
+            bot.send_document(message.chat.id, open(r'schedule.txt', 'r'))
         
         elif (message.text == "🛑 Вернуться в главное меню"):
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -220,4 +276,4 @@ class telebot_itmo:
         else:
             bot.send_message(message.chat.id, text="На такую комманду я не запрограммирован..")
 if __name__ == "__main__":
-    bot.polling(none_stop=True)  
+    bot.polling(none_stop=True) 
